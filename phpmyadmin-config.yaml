@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: phpmyadmin-config
+data:
+  config.inc.php: |-
+    <?php
+    $cfg['Servers'][$i]['host'] = 'mysql';
+    $cfg['Servers'][$i]['port'] = '3306';
+    $cfg['Servers'][$i]['user'] = 'root';
+    $cfg['Servers'][$i]['password'] = 'example_password';
+    $cfg['Servers'][$i]['auth_type'] = 'config';
+    ?>
